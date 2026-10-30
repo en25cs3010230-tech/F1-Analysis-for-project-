@@ -38,18 +38,17 @@ achievements, and race reliability.
   -----------------------------------------------------------------------
   Sheet                               Description
   ----------------------------------- -----------------------------------
-  circuits                          Circuit information and attributes.
+  `circuits`                          Circuit information and attributes.
 
-  championship_standings            Driver championship standings and
+  `championship_standings`            Driver championship standings and
                                       points by season.
 
-  lap_intelligence                  Lap-level information for race
+  `lap_intelligence`                  Lap-level information for race
                                       analysis.
 
-  qualifying_results                Qualifying session results.
-     
+  `qualifying_results`                Qualifying session results.
   
-  race_results                      Race results, drivers, teams,
+  `race_results`                      Race results, drivers, teams,
                                       finishing positions, tyre
                                       information, and retirement
                                       details.
