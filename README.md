@@ -34,9 +34,6 @@ achievements, and race reliability.
 -   **Driver and Team Reliability Trend:** compares race-completion
     rates over seasons.
 
-## Dataset
-
-The workbook uses these data tables/sheets:
 
   -----------------------------------------------------------------------
   Sheet                               Description
@@ -57,61 +54,9 @@ The workbook uses these data tables/sheets:
                                       details.
   -----------------------------------------------------------------------
 
-Check the actual field names and data types in Tableau before editing
-calculations.
-
-## Important Calculated Fields
-
-### Podium Flag
-
-Counts a finish in positions 1, 2, or 3. This assumes `finish_position`
-is numeric.
-
-``` tableau
-IF NOT ISNULL([finish_position])
-AND [finish_position] <= 3
-THEN 1
-ELSE 0
-END
-```
-
-### Race Completion Rate
-
-If `DNF Flag` is coded as `1` for a DNF and `0` otherwise:
-
-``` tableau
-1 - AVG([DNF Flag])
-```
-
 Format the result as a percentage. Verify the dataset's DNF/status
 definitions before relying on this calculation.
 
-## Suggested Tableau Story
-
-1.  Introduction and dashboard overview
-2.  Team performance
-3.  Tyre strategy
-4.  Broadcast statistics
-5.  Retirement reasons
-6.  Circuit-related retirement patterns
-7.  Reliability trends
-8.  Conclusion
-
-Useful interactive filters may include season, team, driver, and circuit
-type.
-
-## Opening the Project
-
-### Tableau Packaged Workbook (`.twbx`)
-
-A `.twbx` file packages the workbook with local supporting data and
-assets.
-
-1.  Open Tableau.
-2.  Select **File → Open**.
-3.  Choose the `.twbx` file.
-4.  Check that the data connections, worksheets, dashboards, and story
-    points load correctly.
 
 ### Sharing through Tableau Public
 
@@ -121,32 +66,6 @@ assets.
     wording may vary).
 4.  Open the published visualization on your Tableau Public profile.
 5.  Use **Share** to copy the public link.
-
-**Privacy warning:** Tableau Public content and its underlying data are
-publicly accessible. Do not publish confidential, personal, or
-restricted information.
-
-## Suggested GitHub Repository Structure
-
-``` text
-formula-1-race-intelligence/
-├── README.md
-├── tableau/
-│   └── formula-1-race-intelligence.twbx
-├── data/
-│   └── README.md
-├── screenshots/
-│   ├── dashboard-overview.png
-│   ├── team-performance.png
-│   ├── broadcast-analysis.png
-│   └── reliability-analysis.png
-└── docs/
-    └── project-report.pdf
-```
-
-Add your actual workbook, screenshots, and report to the relevant
-folders. Do not upload the dataset unless you have permission to
-redistribute it.
 
 ## Tools Used
 
@@ -173,12 +92,3 @@ redistribute it.
 -   Visual trends show associations and patterns; they do not
     independently prove causes.
 
-## Author
-
-Add your name, course/institution, and project details here.
-
-## Data Source and License
-
-Add the original dataset source, attribution requirements, and license
-after confirming the dataset's terms. Do not assume that the data is
-freely redistributable.
