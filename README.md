@@ -52,10 +52,7 @@ achievements, and race reliability.
                                       finishing positions, tyre
                                       information, and retirement
                                       details.
-  -----------------------------------------------------------------------
-
-Format the result as a percentage. Verify the dataset's DNF/status
-definitions before relying on this calculation.
+    ------------------------------------------------------------------------
 
 
 ### Sharing through Tableau Public
